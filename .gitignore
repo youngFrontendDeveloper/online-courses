@@ -1,0 +1,7 @@
+ .idea/
+ .vscode/
+  node_modules/
+  css/style.css.map
+  package-lock.json
+  scss/
+ 

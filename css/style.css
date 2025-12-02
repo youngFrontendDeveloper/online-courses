@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #1E212C;
+  font-family: "Lato", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 20px auto 30px auto;
+}
+.header::after {
+  content: url(/images/dots-for-bg.svg);
+  position: absolute;
+  top: 6px;
+  right: 0;
+  z-index: -1;
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    margin: 50px auto 82px auto;
+  }
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.main::after {
+  content: url(/images/arrows-for-bg.svg);
+  position: absolute;
+  top: 890px;
+  right: 72px;
+  z-index: -1;
+}
+.main::before {
+  content: url(/images/semicircle-for-bg.svg);
+  position: absolute;
+  top: 467px;
+  left: 55px;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1233px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0;
+  }
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .title-block {
+    width: 392px;
+    height: 92px;
+    margin: 0 445px 0 393px;
+  }
+}
+
+.title {
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 130%;
+  color: #1E212C;
+}
+@media screen and (min-width: 1280px) {
+  .title {
+    font-size: 46px;
+  }
+}
+
+.subtitle {
+  order: -1;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto 8px auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1280px) {
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+.filter-search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1280px) {
+  .filter-search-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 6px;
+}
+@media screen and (min-width: 1920px) {
+  .filter {
+    gap: 12px;
+    width: 814px;
+    height: 46px;
+  }
+}
+
+.filter__item {
+  height: 100%;
+  padding: 7px 10px;
+  color: #9A9CA5;
+  list-style: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.filter__item.active {
+  color: #F52F6E;
+  border: 1px solid #F52F6E;
+}
+@media screen and (min-width: 1280px) {
+  .filter__item {
+    padding: 10px 20px;
+  }
+}
+
+.filter__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0;
+  text-align: center;
+}
+@media screen and (min-width: 1280px) {
+  .filter__title {
+    font-size: 16px;
+  }
+}
+
+.filter__counter {
+  position: relative;
+  top: -10px;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.search-form {
+  position: relative;
+  width: 315px;
+  height: 44px;
+  margin-top: 3px;
+}
+
+.search-form__input {
+  width: 100%;
+  height: 100%;
+  padding: 11px 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+}
+
+.search-form__input::placeholder {
+  color: #9A9CA5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.search-form__button {
+  position: absolute;
+  top: 1px;
+  right: -12px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-form__image {
+  width: 16px;
+  height: 16px;
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-bottom: 50px;
+  list-style: none;
+}
+@media screen and (min-width: 1280px) {
+  .courses-list {
+    margin-bottom: 80px;
+  }
+}
+
+.course {
+  width: 100%;
+  max-width: 390px;
+  height: 380px;
+  min-height: fit-content;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E8ED;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.031372549), 0 12px 10px -6px rgba(154, 156, 165, 0.0392156863), 0 30px 24px -10px rgba(154, 156, 165, 0.0509803922), 0 80px 80px -20px rgba(154, 156, 165, 0.0784313725);
+  opacity: 0;
+  animation: fadeCard 1s ease-in-out forwards;
+}
+@media screen and (min-width: 768px) {
+  .course {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .course {
+    width: 390px;
+    height: 438px;
+  }
+}
+
+@keyframes fadeCard {
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .course__image {
+    width: 390px;
+    height: 240px;
+  }
+}
+
+.course__info-block {
+  padding: 24px;
+}
+
+.course__badge {
+  display: block;
+  width: fit-content;
+  height: 23px;
+  margin-bottom: 20px;
+  padding: 1px 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.course__title {
+  margin: 0 auto 20px auto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.course__info {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.course__price {
+  color: #F52F6E;
+  font-weight: 700;
+}
+.course__price:after {
+  content: url("/images/divider.svg");
+  padding: 5.5px 4px 5.5px 8px;
+  vertical-align: middle;
+}
+
+.course__author {
+  color: #787A80;
+  font-weight: 400;
+}
+
+.load-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 116px;
+  margin: 0 auto 86px auto;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.load-more__image {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
