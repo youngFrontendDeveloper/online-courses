@@ -5,13 +5,23 @@ const searchButton = document.querySelector( ".search-form__button" );
 const coursesList = document.querySelector( ".courses-list" );
 let filteredCourses = [ ...courses ];
 
+function categoryCount(courses, category) {
+  let sum = 0;
+
+  if( category === "All" ) {
+    return courses.length;
+  }
+
+  return courses.filter( course => course.category === category ).length;
+}
+
 // Добавляем элементы в фильтр
 filter.innerHTML = categories
   .map(
     (category, index) => `
       <li class="filter__item${ index === 0 ? " active" : "" }" data-category="${ category.title }">
         <span  class="filter__title">${ category.title }
-          <span class="filter__counter">${ category.count }</span>
+          <span class="filter__counter">${ categoryCount( courses, category.title ) }</span>
         </span>
       </li>
     `
